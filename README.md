@@ -218,7 +218,7 @@ In this section, the project will evaluate the performance of our movie recommen
 - Data Visualization Tools (e.g., Matplotlib, Seaborn)
 - Streamlit
 
-<img src="https://t3.ftcdn.net/jpg/05/74/18/34/240_F_574183420_pc0caByueQA0QjQMsJr0lY5txOaQoBmo.jpg" alt="Alt Text" width="900" height="900">
+<img src="https://t3.ftcdn.net/jpg/05/74/18/34/240_F_574183420_pc0caByueQA0QjQMsJr0lY5txOaQoBmo.jpg" alt="Alt Text" width="900" height="500">
 
 
 
