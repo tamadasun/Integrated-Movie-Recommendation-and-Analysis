@@ -1,10 +1,6 @@
 # The Cinematic Nexus: Unveiling the Future of Movie Recommendations and Analysis
 
-![AltText](https://www.latentview.com/wp-content/uploads/2023/08/ai-and-analytics-in-the-airline-industry-driving-efficiency-and-enhancing-cx-featured.jpg)
-
 ![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
-
-
 
 
 # REMEMBER TO CHANGE TO PAST TENSE WHEN TASK COMPLETED
