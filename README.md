@@ -204,7 +204,7 @@ In this section, the project will evaluate the performance of our movie recommen
 
 ## Conclusion
 
-In summary, this project aspires to transform the realm of movie recommendations through the integration of an interactive chatbot for tailored user engagement. Each segment of the project is dedicated to distinct facets, ranging from meticulous data cleaning and modeling to the development of the chatbot and the assessment of evaluation metrics. The methodical progression of the project guarantees a thorough and detailed examination, yielding valuable insights aimed at elevating the overall movie-watching journey.
+
 
 ## Technology Requirements
 
