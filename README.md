@@ -219,4 +219,4 @@ In this section, the project will evaluate the performance of our movie recommen
 - Streamlit
 
 
-![AltText](https://media.licdn.com/dms/image/D5612AQFwNc05_ndXIQ/article-cover_image-shrink_720_1280/0/1698694514274?e=1710979200&v=beta&t=ibpfjqzM24Lot2cKZ34GcW-3A4rDEQB5G5FKEhNEnhY)
+![Alt Text](https://t3.ftcdn.net/jpg/05/74/18/34/240_F_574183420_pc0caByueQA0QjQMsJr0lY5txOaQoBmo.jpg)
