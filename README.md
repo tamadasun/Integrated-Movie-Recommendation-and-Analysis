@@ -2,8 +2,9 @@
 
 ![AltText](https://www.latentview.com/wp-content/uploads/2023/08/ai-and-analytics-in-the-airline-industry-driving-efficiency-and-enhancing-cx-featured.jpg)
 
+![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
 
-https://track.canva.com/CL0/https:%2F%2Fwww.canva.com%2Fdesign%2FDAF7lCADBmQ%2Fshare%3Finvite=Si-NX4widV2zmsobv_4rhg%26utm_campaign=designshare%26utm_medium=email%26utm_source=shareButton/1/0100018d666a2770-1ae3ee29-f0a9-4845-937c-319560cf3fb7-000000/2FHXxbHbVNkzx3lhKpiAkW4jjh0z1H_aDxCpxb_hWdw=338![image](https://github.com/tamadasun/Integrated-Movie-Recommendation-and-Analysis/assets/42866828/018a3f37-db0d-4047-a6fc-16b2e1f7c54e)
+
 
 
 # REMEMBER TO CHANGE TO PAST TENSE WHEN TASK COMPLETED
