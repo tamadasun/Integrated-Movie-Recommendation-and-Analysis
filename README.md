@@ -4,6 +4,7 @@
 
 <img src="https://i.ibb.co/9pbVsRT/A-film-by-Anthony-Amadasun-3.jpg" alt="Alt Text" width="900" height="500">
 
+<img src="path/to/A-film-by-Anthony-Amadasun-3.jpg" alt="Alt Text" width="900" height="500">
 
 # REMEMBER TO CHANGE TO PAST TENSE WHEN TASK COMPLETED
 
