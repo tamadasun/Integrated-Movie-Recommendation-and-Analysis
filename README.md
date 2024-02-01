@@ -2,8 +2,6 @@
 
 ![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
 
-![Image Alt Text](https://ibb.co/6mZcLDt)
-
 
 # REMEMBER TO CHANGE TO PAST TENSE WHEN TASK COMPLETED
 
