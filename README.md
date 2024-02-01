@@ -3,6 +3,9 @@
 ![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
 
 <img src="https://i.ibb.co/9pbVsRT/A-film-by-Anthony-Amadasun-3.jpg" alt="Alt Text" width="900" height="500">
+<a href="https://ibb.co/9pbVsRT" target="_blank">
+  <img src="https://i.ibb.co/9pbVsRT/A-film-by-Anthony-Amadasun-3.png" alt="A-film-by-Anthony-Amadasun-3" width="900" height="500" border="0" />
+</a>
 
 <img src="path/to/A-film-by-Anthony-Amadasun-3.jpg" alt="Alt Text" width="900" height="500">
 
