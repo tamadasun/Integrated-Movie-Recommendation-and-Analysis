@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-# The Cinematic Nexus: Unveiling the Future of Movie Recommendations and Analysis 
-=======
 # The Cinematic Nexus: Unveiling the Future of Movie Recommendations and Analysis
->>>>>>> origin/main
+
 
 ![Image Description](https://imgur.com/VMGcx6v.jpg)
 
@@ -126,7 +123,6 @@ The target metric will focus on reducing the false-positive rate in movie recomm
 ---
 ![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
 
-![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
 
 ## Part 1: Data Cleaning and Exploratory Data Analysis (EDA)
 
@@ -231,11 +227,3 @@ In this section, the project will evaluate the performance of our movie recommen
 
 <img src="https://t3.ftcdn.net/jpg/05/74/18/34/240_F_574183420_pc0caByueQA0QjQMsJr0lY5txOaQoBmo.jpg" alt="Alt Text" width="900">
 
-
-
-<<<<<<< HEAD
-<img src="https://t3.ftcdn.net/jpg/05/74/18/34/240_F_574183420_pc0caByueQA0QjQMsJr0lY5txOaQoBmo.jpg" alt="Alt Text" width="900">
-
-
-=======
->>>>>>> origin/main
