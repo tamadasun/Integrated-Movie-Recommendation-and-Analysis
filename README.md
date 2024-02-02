@@ -1,6 +1,5 @@
 # The Cinematic Nexus: Unveiling the Future of Movie Recommendations and Analysis
 
-![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
 ![Image Description](https://imgur.com/VMGcx6v.jpg)
 
 # REMEMBER TO CHANGE TO PAST TENSE WHEN TASK COMPLETED
@@ -116,6 +115,7 @@ The target metric will focus on reducing the false-positive rate in movie recomm
 - Use web frameworks like Streamlit to deploy the machine learning models and chatbot into a web application. This allows users to interact with the chatbot seamlessly. 
 
 ---
+![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
 
 ## Part 1: Data Cleaning and Exploratory Data Analysis (EDA)
 
