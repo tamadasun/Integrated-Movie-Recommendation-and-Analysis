@@ -1,7 +1,7 @@
 # The Cinematic Nexus: Unveiling the Future of Movie Recommendations and Analysis
 
 ![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
-
+![Image Description](https://imgur.com/VMGcx6v.jpg)
 
 # REMEMBER TO CHANGE TO PAST TENSE WHEN TASK COMPLETED
 
