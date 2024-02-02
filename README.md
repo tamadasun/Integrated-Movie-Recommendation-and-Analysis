@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # The Cinematic Nexus: Unveiling the Future of Movie Recommendations and Analysis 
+=======
+# The Cinematic Nexus: Unveiling the Future of Movie Recommendations and Analysis
+>>>>>>> origin/main
 
 ![Image Description](https://imgur.com/VMGcx6v.jpg)
 
@@ -120,6 +124,7 @@ The target metric will focus on reducing the false-positive rate in movie recomm
 - Use web frameworks like Streamlit to deploy the machine learning models and chatbot into a web application. This allows users to interact with the chatbot seamlessly. 
 
 ---
+![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
 
 ![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
 
@@ -211,7 +216,7 @@ In this section, the project will evaluate the performance of our movie recommen
 
 ## Conclusion
 
-In summary, this project aspires to transform the realm of movie recommendations through the integration of an interactive chatbot for tailored user engagement. Each segment of the project is dedicated to distinct facets, ranging from meticulous data cleaning and modeling to the development of the chatbot and the assessment of evaluation metrics. The methodical progression of the project guarantees a thorough and detailed examination, yielding valuable insights aimed at elevating the overall movie-watching journey.
+
 
 ## Technology Requirements
 
@@ -224,7 +229,13 @@ In summary, this project aspires to transform the realm of movie recommendations
 - Data Visualization Tools (e.g., Matplotlib, Seaborn)
 - Streamlit
 
-
 <img src="https://t3.ftcdn.net/jpg/05/74/18/34/240_F_574183420_pc0caByueQA0QjQMsJr0lY5txOaQoBmo.jpg" alt="Alt Text" width="900">
 
 
+
+<<<<<<< HEAD
+<img src="https://t3.ftcdn.net/jpg/05/74/18/34/240_F_574183420_pc0caByueQA0QjQMsJr0lY5txOaQoBmo.jpg" alt="Alt Text" width="900">
+
+
+=======
+>>>>>>> origin/main
