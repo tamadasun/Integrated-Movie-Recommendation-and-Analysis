@@ -1,8 +1,7 @@
-# Integrated-Movie-Recommendation-and-Analysis
+# The Cinematic Nexus: Unveiling the Future of Movie Recommendations and Analysis 
 
-![AltText](https://www.latentview.com/wp-content/uploads/2023/08/ai-and-analytics-in-the-airline-industry-driving-efficiency-and-enhancing-cx-featured.jpg)
+![Image Description](https://imgur.com/VMGcx6v.jpg)
 
-# REMEMBER TO CHANGE TO PAST TENSE WHEN TASK COMPLETED
 
 ---
 
@@ -14,44 +13,50 @@ Welcome to the my project repository! The goal of this project is to develop a d
 
 ## Table of Content
 
-1. [Data_Cleaning and EDA](01_Data_Cleaning_EDA.ipynb)
-   - 1.1 Introduction
-   - 1.2 Data Collection
-   - 1.3 Data Cleaning
-   - 1.4 EDA
+1. [Notebooks](notebook/)
+   - 1.1 [Data_Cleaning_and_EDA.ipynb](notebooks/01_Data_Cleaning_EDA.ipynb)
+      - 1.1.1 Introduction
+      - 1.1.2 Data Collection
+      - 1.1.3 Data Cleaning
+      - 1.1.4 EDA
+   - 1.2 [Data_Modeling.ipynb](notebooks/02_Data_Modeling.ipynb)
+      - 1.2.1 Introduction
+      - 1.2.2 Data Transformation/Engineering
+      - 1.2.3 Data Modeling
+      - 1.2.4 Data Visualization
+   - 1.3 [Chatbot_Implementation.ipynb](notebooks/03_Chatbot.ipynb)
+      - 1.3.1 Introduction
+      - 1.3.2 Chatbot Development
+      - 1.3.3 Integration with Movie Recommendation System
+   - 1.4 [Streamlit_Application.ipynb](notebooks/04_Steamlit.ipynb)
+      - 1.4.1 Introduction
+      - 1.4.2 Streamlit Development
+      - 1.4.3 Integration with Movie Recommendation System
+   - 1.5 [Evaluation_Summary.ipynb](notebooks/05_Evaluation_Summary.ipynb)
+      - 1.5.1 Introduction
+      - 1.5.2 Evaluation of Movie Recommendation System
+      - 1.5.3 Summary of Findings
+      - 1.5.4 Recommendations for Further Improvement
 
-2. [Data Modeling](02_Data_Modeling.ipynb)
-   - 2.1 Introduction
-   - 2.2 Data Tranformation/Engineering
-   - 2.3 Data Modeling
-   - 2.4 Data Visualization
-  
-3. [Chatbot Implementation](03_Chatbot.ipynb)
-   - 3.1 Introduction
-   - 3.2 Chatbot Development
-   - 3.3 Integration with Movie Recommendation System
- 
-4. [Chatbot Implementation](03_Chatbot.ipynb)
-   - 3.1 Introduction
-   - 3.2 Chatbot Development
-   - 3.3 Integration with Movie Recommendation System
+2. [Data](data/)
+   - 2.1 Dataset Dictionary
+   - 2.2 Data Files
 
-3. [Data](data/)
-   - 3.1 Dataset Dictionary
-   - 3.2 Data Files
+3. [Images](images/)
+   - 3.1 Visualizations
+   - 3.2 Charts
 
-4. [Images](images/)
-   - 4.1 Visualizations
-   - 4.2 Charts
+4. [Presentation](presentation/)
+   - 4.1 PowerPoint Presentation (PDF)
 
-5. [Presentation](presentation/)
-   - 5.1 PowerPoint Presentation (PDF)
+5. [Model](model/)
+   - 5.1 Trained Model (.pkl)
+   - 5.2 Streamlit File
+   - 5.3 ?? (Add any additional files related to the model)
 
-6. [Model](model/)
-   - 6.1 Trained Model (.pkl)
-   
 
----
+--- 
+
 
 ## Data Description
 
@@ -116,9 +121,11 @@ The target metric will focus on reducing the false-positive rate in movie recomm
 
 ---
 
+![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
+
 ## Part 1: Data Cleaning and Exploratory Data Analysis (EDA)
 
-In this section, the project will detail the process of acquiring and preparing the data for our movie recommendation system. This includes data gathering, cleaning, and any necessary transformations.
+In this section, the project will detail the process of acquiring and preparing the data for our movie recommendation system. This includes data gathering, cleaning, and conducting exploratory data analysis.
 
 - Data Collection
     - Retrieve movie data from TMDB API, ensuring comprehensive coverage of movie details.
@@ -218,4 +225,6 @@ In summary, this project aspires to transform the realm of movie recommendations
 - Streamlit
 
 
-![AltText](https://media.licdn.com/dms/image/D5612AQFwNc05_ndXIQ/article-cover_image-shrink_720_1280/0/1698694514274?e=1710979200&v=beta&t=ibpfjqzM24Lot2cKZ34GcW-3A4rDEQB5G5FKEhNEnhY)
+<img src="https://t3.ftcdn.net/jpg/05/74/18/34/240_F_574183420_pc0caByueQA0QjQMsJr0lY5txOaQoBmo.jpg" alt="Alt Text" width="900">
+
+
