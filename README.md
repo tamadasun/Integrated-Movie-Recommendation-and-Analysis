@@ -18,8 +18,7 @@ Welcome to the my project repository! The goal of this project is to develop a d
    - 1.1 [Data_Cleaning_and_EDA.ipynb](notebooks/01_Data_Cleaning_EDA.ipynb)
       - 1.1.1 Introduction
       - 1.1.2 Data Collection
-      - 1.1.3 Data Cleaning
-      - 1.1.4 EDA
+      - 1.1.3 Data Cleaning and EDA
    - 1.2 [Data_Modeling.ipynb](notebooks/02_Data_Modeling.ipynb)
       - 1.2.1 Introduction
       - 1.2.2 Data Transformation/Engineering
