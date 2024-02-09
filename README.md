@@ -62,19 +62,24 @@ Welcome to the my project repository! The goal of this project is to develop a d
 
 <div align='center'>
 
-| column         | type   | description                       |
-| -------------- | ------ | --------------------------------- |
-| airline        | object | airline company                   |
-| flight         | object | flight number                     |
-| origin         | object | departure city                    |
-| departure_time | object | departure time of day             |
-| stops          | int    | number of stops                   |
-| arrival_time   | object | arrival time of day               |
-| destination    | object | arrival city                      |
-| class          | int    | economy (0) or business (1) class |
-| duration       | float  | flight duration in minutes        |
-| price          | int    | ticket price in USD               |
-
+| column         | type   | description                                          |
+| -------------- | ------ | ---------------------------------------------------- |
+| adult          | bool   | whether intended for adults                          |
+| backdrop_path  | object | URL for a movie image backdrop                       |
+| genre_ids      | object | genre ID for each movie                              |
+| id             | int64  | unique identifier for each movie                     |
+| original_lan   | object | original language in which the movie was produced    |
+| original_title | object | original title of the movie in its original language |
+| overview       | object | brief summary of movie plot                          |
+| popularity     | float64| popularity of a movie based on mentions and views    |
+| poster_path    | object | URL to the movie's poster image                      |
+| release_date   | date   | release date of the movie                            |
+| title          | object | title of the movie                                   |
+| video          | bool   | whether the movie has a video                        |
+| vote_average   | float64| average rating given to a movie                      |
+| vote_count     | int64  | number of votes a movie has received                 |
+    
+ 
 </div>
 
 ---
