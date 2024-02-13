@@ -22,16 +22,11 @@ Welcome to the my project repository! The goal of this project is to develop a d
    - 1.2 [Data_Modeling.ipynb](notebooks/02_Data_Modeling.ipynb)
       - 1.2.1 Introduction
       - 1.2.2 Data Transformation/Engineering
-      - 1.2.3 Data Modeling
-      - 1.2.4 Data Visualization
-   - 1.3 [Chatbot_Implementation.ipynb](notebooks/03_Chatbot.ipynb)
+      - 1.2.3 Data Modeling and Visualization
+   - 1.3 [Streamlit_Application.ipynb](notebooks/04_Steamlit.ipynb)
       - 1.3.1 Introduction
-      - 1.3.2 Chatbot Development
+      - 1.3.2 Streamlit Development
       - 1.3.3 Integration with Movie Recommendation System
-   - 1.4 [Streamlit_Application.ipynb](notebooks/04_Steamlit.ipynb)
-      - 1.4.1 Introduction
-      - 1.4.2 Streamlit Development
-      - 1.4.3 Integration with Movie Recommendation System
    - 1.5 [Evaluation_Summary.ipynb](notebooks/05_Evaluation_Summary.ipynb)
       - 1.5.1 Introduction
       - 1.5.2 Evaluation of Movie Recommendation System
@@ -51,8 +46,8 @@ Welcome to the my project repository! The goal of this project is to develop a d
 
 5. [Model](model/)
    - 5.1 Trained Model (.pkl)
-   - 5.2 Streamlit File
-   - 5.3 ?? (Add any additional files related to the model)
+   - 5.2 movie_app.py
+   - 5.3 movie_recommendation.py
 
 
 --- 
@@ -116,13 +111,10 @@ The target metric will focus on reducing the false-positive rate in movie recomm
 
 **Techniques**
 - Collaborative Filtering:  make movie recommendations based on user preferences and similarities between users or items
-- Content-Based Filtering: recommends items based on the features of the items and the user's preferences. I
-- Utilize automation tools and natural language processing (NLP) techniques to implement an interactive chatbot capable of understanding and responding to user queries.
-    - Use NLTK for intent recognition (preprocess user input, tokenize it, and identify the intent based on keywords, patterns, or machine learning models)
-    - Use NLTK for response generation (response generation mechanism based on the recognized intent that could involve rule-based responses)
+- Content-Based Filtering: recommends items based on the features of the items and the user's preferences.
 
 **Model Deployment**
-- Use web frameworks like Streamlit to deploy the machine learning models and chatbot into a web application. This allows users to interact with the chatbot seamlessly. 
+- Use web frameworks like Streamlit to deploy the machine learning models into a web application. This allows users to interact with the recommender seamlessly. 
 
 ---
 ![Alt Text](https://asiainsurancepost.com/wp-content/uploads/2023/08/ai-4-980x654.webp)
@@ -159,45 +151,31 @@ In this section, the project will delve into the process of transforming and eng
     - Encoding: Encode categorical features, ensuring all data is in a format suitable for modeling.
 - Data Modeling
     - Collaborative Filtering: Implement collaborative filtering techniques to make movie recommendations based on user preferences and similarities between users or items.
-    - Content-Based Filtering: Apply content-based filtering approaches to recommend movies based on their features, such as genre, cast, or director.
-    - Hybrid Models: Explore the development of hybrid models that combine collaborative and content-based filtering for improved recommendation accuracy.
+    - Content-Based Filtering: Apply content-based filtering approaches to recommend movies based on their features, such as overview, cast, or director and nlp technique.
+    - K-Means model: Apply content-based genre clustering for improved recommendation accuracy.
 - Data Visualization 
-    - Model Evaluation: Visualize the performance of different recommendation models using metrics such as precision, recall, and accuracy.
+    - Model Evaluation: Visualize the performance of different recommendation models and showcase Silhouette and Inertia Scores.
     - Feature Importance: Gain insights into the importance of different features in the models through visualizations, aiding in model interpretation.
     - User-Item Interaction: Visualize patterns in user-item interaction matrices to understand user preferences and item popularity.
 
 ---
 
-## Part 3: Chatbot Implementation
 
-In this section, the project will focus on developing and integrating an interactive chatbot to enhance user interaction with our movie recommendation system.
-
-- Chatbot Development
-    - Utilize NLP library such as NLTK for intent recognition and response generation.
-    - Implement dialog management to maintain context and create a smooth conversational experience.
-    - Fine-tune the chatbot's responses to provide relevant and user-friendly recommendations.
-- Integration with Movie Recommendation System
-    - Connect the chatbot with the underlying movie recommendation models to fetch real-time personalized movie suggestions.
-    - Implement a user interface within the chatbot for users to interact with and receive movie recommendations seamlessly.
-    - Ensure that the chatbot integrates with the recommendation system's data processing components for dynamic and adaptive responses.
-
----
-
-## Part 4: Streamlit Application
+## Part 3: Streamlit Application
 
 In this section, the project will focus on developing a Streamlit application that serves as the user interface for our movie recommendation and analysis platform.
 
 - Streamlit Development
-    - Design an intuitive layout that incorporates chatbot interaction, movie suggestions, and additional features for an engaging user experience.
-    - Implement responsive components within the Streamlit app to showcase real-time movie recommendations based on user preferences.
+    - Design an intuitive layout that incorporates recommendation function, movie suggestions, and additional features for an engaging user experience.
+    - Implement responsive components within the Streamlit app to showcase real-time movie recommendations based on user input.
 - Integration with Movie Recommendation System
-    - Integrate the Streamlit application with the underlying movie recommendation and chatbot systems.
+    - Integrate the Streamlit application with the underlying movie recommendation.
     - Ensure seamless communication between the Streamlit app and Jupyter Notebook
     - Implement interactive elements within the app for users to provide feedback and refine preferences
 
 --- 
 
-## Part 5: Evalutaion Metric/Executive Summary/Recommendations
+## Part 4: Evalutaion Metric/Executive Summary/Recommendations
 
 In this section, the project will evaluate the performance of our movie recommendation system, provide an executive summary of our findings, offer recommendations for further improvement, and conclude our project.
 
