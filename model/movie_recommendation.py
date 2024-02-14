@@ -1,16 +1,92 @@
 import pandas as pd
-from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
+import matplotlib.pyplot as plt
+
 from scipy.sparse import csr_matrix
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-from sklearn.feature_extraction.text import TfidfVectorizer
+from scipy.sparse import hstack, vstack
+
+#sklearn import
+from sklearn.preprocessing import MultiLabelBinarizer, OneHotEncoder
+from sklearn.metrics.pairwise import pairwise_distances, cosine_similarity
+from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.cluster import KMeans
+from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import silhouette_score
+
+#nltk import
 import nltk
 from nltk.corpus import wordnet
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer, WordNetLemmatizer
+from nltk.tokenize import word_tokenize
+
+#gensim imports
+from gensim.models import Doc2Vec
+from gensim.models.doc2vec import TaggedDocument
+
+import string
+import json
+
 
 #make functions reusable as modules 
+
+# Load your dataset
+tmdb_df = pd.read_csv('../data/tmdb_data.csv')
+
+def extract_lead_actor(x):
+    try:
+        if not pd.isna(x): #Check if the value is non NaN
+            cast_list = x.split(', ')
+            return cast_list[0] if cast_list else None
+        else:
+            return None
+    except Exception as e:
+        print(f"Error extracting lead actor: {e}")
+        return None
+    
+def extract_director(x):
+    try:
+        if pd.notna(x):  # Check if the value is not NaN
+            directors_list = json.loads(x)
+            if directors_list:
+                return directors_list[0]['name']
+    except (json.JSONDecodeError, KeyError, IndexError):
+        pass  # Handle errors by returning None or any default value
+    return None
+
+# Create the single director column by extracting the first director name
+tmdb_df['director'] = tmdb_df['directors'].apply(lambda x: x.split(',')[0] if pd.notna(x) else None)
+
+# Calculate the average user rating for movies directed by each director
+director_avg_rating = tmdb_df.groupby('director')['vote_average'].mean().reset_index()
+director_avg_rating.rename(columns={'vote_average': 'director_avg_rating'}, inplace=True)
+
+# Merge the director average ratings to df
+tmdb_df = pd.merge(tmdb_df, director_avg_rating, how='left', on='director')
+
+
+# Apply the function to create the lead_actor column
+tmdb_df['lead_actor'] = tmdb_df['cast'].apply(extract_lead_actor)
+
+# Calculate the average user rating for movies featuring each lead actor
+actor_avg_rating = tmdb_df.groupby('lead_actor')['vote_average'].mean().reset_index()
+actor_avg_rating.rename(columns={'vote_average': 'lead_actor_avg_rating'}, inplace=True)
+
+# Merge the actor average ratings back to df
+tmdb_df = pd.merge(tmdb_df, actor_avg_rating, how='left', on='lead_actor')
+
+# Convert the genre_ids_str column to a list of lists
+tmdb_df['genre_ids_str'] = tmdb_df['genre_ids_str'].apply(eval)
+
+# Use MultiLabelBinarizer to one-hot encode the genre_ids_str column
+mlb = MultiLabelBinarizer()
+genre_encoded = pd.DataFrame(mlb.fit_transform(tmdb_df['genre_ids_str']), columns=mlb.classes_, index=tmdb_df.index)
+
+# Concatenate the one-hot encoded genres with the original DataFrame
+tmdb_df = pd.concat([tmdb_df, genre_encoded], axis=1)
+
+# Drop the original genre_ids_str column
+tmdb_df = tmdb_df.drop('genre_ids_str', axis=1)
 
 def recommend_based_on_user_preference(user_preference, tmdb_df):
     # Split user input
@@ -30,9 +106,35 @@ def recommend_based_on_user_preference(user_preference, tmdb_df):
 
     return recommended_movies
 
-item_similarity = cosine_similarity(sparse_interaction_matrix.T, dense_output=False)
+# Preparing data for building a recommendation system 
+# by handling sparsity and creating a sparse matrix for 
+# Collaborative filtering methods
+interaction_data = tmdb_df[['popularity_normalized', 'vote_average_normalized', 
+                            'vote_count_normalized', 'release_year', 'lead_actor_avg_rating',
+                           'director_avg_rating'] + list(mlb.classes_)]
+
+# columns in the interaction_data_pivot
+interaction_data_columns = ['director_avg_rating', 'lead_actor_avg_rating', 'popularity_normalized', 'vote_average_normalized', 'vote_count_normalized', 'release_year', 'Action', 'Adventure', 'Animation', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family', 'Fantasy', 'History', 'Horror', 'Music', 'Mystery', 'Romance', 'Science Fiction', 'TV Movie', 'Thriller', 'War', 'Western']
+
+# title as index and  the desired columns
+interaction_data_pivot = tmdb_df.set_index('title')[interaction_data_columns]
+
+interaction_data_pivot.head()
+
+# Handling Sparse Data: Replace NaN values with 0
+interaction_matrix = interaction_data.fillna(0)
+
+#convert into sparse matrix using csr_matrix
+sparse_interaction_matrix = csr_matrix(interaction_matrix.values)
+
+item_similarity = cosine_similarity(sparse_interaction_matrix.T, dense_output=True)
+
 # interaction_data_pivot is user interaction data
 item_similarity_matrix = cosine_similarity(interaction_data_pivot.fillna(0))
+
+# Calculate cosine similarity using sparse matrix
+sparse_distances = pairwise_distances(sparse_interaction_matrix, metric='cosine')
+sparse_cosine_similarities = 1.0 - sparse_distances
 
 # Function to get movie recommendations based on item similarity
 def get_movie_recommendations(movie_title, item_similarity_matrix, interaction_data_pivot):
@@ -203,6 +305,27 @@ def apply_tfidf_vectorizer(data, text_column='preprocessed_overview'):
     
     return tfidf_matrix, tfidf_vectorizer
 
+def combine_features(data, tfidf_matrix):
+    """
+    Combine TF-IDF matrix with one-hot encoded categorical features.
+
+    Parameters:
+    - data (pd.DataFrame): The input dataframe containing the necessary columns.
+    - tfidf_matrix (scipy.sparse.csr_matrix): The TF-IDF matrix obtained from preprocessed text data.
+
+    Returns:
+    - combined_matrix (scipy.sparse.csr_matrix): The combined matrix of TF-IDF and one-hot encoded categorical features.
+    """
+    # One-Hot Encoding for categorical features like cast and director
+    categorical_features = ['cast', 'director', 'release_year']
+    one_hot_encoder = OneHotEncoder()
+    categorical_matrix = one_hot_encoder.fit_transform(data[categorical_features])
+
+    # Combine TF-IDF matrix with the one-hot encoded categorical matrix
+    combined_matrix = hstack([tfidf_matrix, categorical_matrix])
+
+    return combined_matrix
+
 tfidf_matrix, tfidf_vectorizer = apply_tfidf_vectorizer(tmdb_df)
 # Combine features
 combined_features_matrix = combine_features(tmdb_df, tfidf_matrix)
@@ -245,4 +368,3 @@ def get_similar_movies(movie_title, similarity_matrix, data):
     similar_movie_indices = similar_scores.argsort()[::-1][1:]  # Exclude the input movie itself
     similar_movies = data.iloc[similar_movie_indices]['title'].tolist()
     return similar_movies
-

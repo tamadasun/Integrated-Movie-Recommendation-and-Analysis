@@ -23,7 +23,7 @@ Welcome to the my project repository! The goal of this project is to develop a d
       - 1.2.1 Introduction
       - 1.2.2 Data Transformation/Engineering
       - 1.2.3 Data Modeling and Visualization
-   - 1.3 [Streamlit_Application.ipynb](notebooks/04_Steamlit.ipynb)
+   - 1.3 [Streamlit_Evaluation_Summary.ipynb](notebooks/03_Streamlit_Evaluation_Summary.ipynb)
       - 1.3.1 Introduction
       - 1.3.2 Streamlit Development
       - 1.3.3 Integration with Movie Recommendation System
@@ -156,7 +156,6 @@ In this section, the project will delve into the process of transforming and eng
 - Data Visualization 
     - Model Evaluation: Visualize the performance of different recommendation models and showcase Silhouette and Inertia Scores.
     - Feature Importance: Gain insights into the importance of different features in the models through visualizations, aiding in model interpretation.
-    - User-Item Interaction: Visualize patterns in user-item interaction matrices to understand user preferences and item popularity.
 
 ---
 
