@@ -8,7 +8,7 @@
 
 ## Overview
 
-Welcome to the groundbreaking CineConnect project repository! The objective is nothing short of revolutionizing the movie streaming experience through the development of a dynamic recommendation and analysis platform. Unlike traditional models, CineConnect incorporates an advanced recommendation system that integrates collaborative, content-based, and genre cluster models. 
+Welcome to the groundbreaking CineConnect project repository!! The objective is nothing short of revolutionizing the movie streaming experience through the development of a dynamic recommendation and analysis platform. Unlike traditional models, CineConnect incorporates an advanced recommendation system that integrates collaborative, content-based, and genre cluster models. 
 
 The heart of our innovation lies in providing a personalized and engaging movie-watching journey for users with a focus on collaborative, content-based, and genre cluster models that aims to offer a seamless and adaptive experience without compromising on personalization. Throughout this project, we tackle the challenges faced by existing recommendation systems head-on. From addressing data sparsity to overcoming the limitations of static models, we employ state-of-the-art techniques, including API interactions, extensive data wrangling, feature engineering, exploratory data analysis (EDA), and data cleaning.
 
